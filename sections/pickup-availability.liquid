@@ -90,6 +90,9 @@
               {% render 'icon-tick' %}
               {{ 'products.product.pickup_availability.pick_up_available' | t }},
               {{ availability.pick_up_time | downcase }}
+            {% else %}
+              {% render 'icon-error' %}
+              {{ 'products.product.pickup_availability.pick_up_available' | t }}
             {%- endif -%}
           </p>
 
